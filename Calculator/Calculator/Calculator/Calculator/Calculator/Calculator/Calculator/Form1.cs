@@ -57,5 +57,24 @@ namespace Calculator
             double nho = double.Parse(lblDisplay.Text);
             isTypingNumber = false;
         }
+
+        private void TinhKetQua()
+        {
+            // tinh toan dua tren: nho, pheptoan, lblDisplay. Text
+            double tam = double.Parse(lblDisplay.Text);
+            double ketqua = 0.0;
+            switch (pheptoan)
+            {
+                case PhepToan.Cong: ketqua = nho + tam; break;
+                case PhepToan.Tru: ketqua = nho - tam; break;
+                case PhepToan.Nhan: ketqua = nho * tam; break;
+                case PhepToan.Chia: ketqua = nho / tam; break;
+            }
+            // gan ket qua tinh duooc len lblDisplay
+            lblDisplay.Text = ketqua.ToString();
+
+        }
+
+        
     }
 }

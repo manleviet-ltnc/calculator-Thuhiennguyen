@@ -297,6 +297,7 @@
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "Calculator";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.Click += new System.EventHandler(this.NhapPhepToan);
             this.ResumeLayout(false);
 

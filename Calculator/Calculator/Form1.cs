@@ -100,6 +100,23 @@ namespace Calculator
                     break;
               
         }
+
+        }
+
+        private void btnCan_Click(object sender, EventArgs e)
+        {
+            double Can = double.Parse(lblHienThi.Text);
+            lblHienThi.Text = Math.Sqrt(Can).ToString();
+        }
+
+        private void btnPhanTram_Click(object sender, EventArgs e)
+        {
+            lblHienThi.Text = (double.Parse(lblHienThi.Text) / 100).ToString();
+        }
+
+        private void btnDoiDau_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -46,7 +46,7 @@
             this.btnNhan = new System.Windows.Forms.Button();
             this.btnCham = new System.Windows.Forms.Button();
             this.btnNho = new System.Windows.Forms.Button();
-            this.btnLon = new System.Windows.Forms.Button();
+            this.btnCan = new System.Windows.Forms.Button();
             this.btnPhanTram = new System.Windows.Forms.Button();
             this.btnBang = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -182,6 +182,7 @@
             this.btnDoiDau.TabIndex = 17;
             this.btnDoiDau.Text = "-/+";
             this.btnDoiDau.UseVisualStyleBackColor = true;
+            this.btnDoiDau.Click += new System.EventHandler(this.btnDoiDau_Click);
             // 
             // btnCong
             // 
@@ -246,15 +247,16 @@
             this.btnNho.Text = "C";
             this.btnNho.UseVisualStyleBackColor = true;
             // 
-            // btnLon
+            // btnCan
             // 
-            this.btnLon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLon.Location = new System.Drawing.Point(176, 132);
-            this.btnLon.Name = "btnLon";
-            this.btnLon.Size = new System.Drawing.Size(35, 35);
-            this.btnLon.TabIndex = 12;
-            this.btnLon.Text = ">";
-            this.btnLon.UseVisualStyleBackColor = true;
+            this.btnCan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCan.Location = new System.Drawing.Point(176, 132);
+            this.btnCan.Name = "btnCan";
+            this.btnCan.Size = new System.Drawing.Size(35, 35);
+            this.btnCan.TabIndex = 12;
+            this.btnCan.Text = "√";
+            this.btnCan.UseVisualStyleBackColor = true;
+            this.btnCan.Click += new System.EventHandler(this.btnCan_Click);
             // 
             // btnPhanTram
             // 
@@ -265,6 +267,7 @@
             this.btnPhanTram.TabIndex = 7;
             this.btnPhanTram.Text = "%";
             this.btnPhanTram.UseVisualStyleBackColor = true;
+            this.btnPhanTram.Click += new System.EventHandler(this.btnPhanTram_Click);
             // 
             // btnBang
             // 
@@ -295,7 +298,7 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnBang);
             this.Controls.Add(this.btnPhanTram);
-            this.Controls.Add(this.btnLon);
+            this.Controls.Add(this.btnCan);
             this.Controls.Add(this.btnNho);
             this.Controls.Add(this.btnCham);
             this.Controls.Add(this.btnNhan);
@@ -343,7 +346,7 @@
         private System.Windows.Forms.Button btnNhan;
         private System.Windows.Forms.Button btnCham;
         private System.Windows.Forms.Button btnNho;
-        private System.Windows.Forms.Button btnLon;
+        private System.Windows.Forms.Button btnCan;
         private System.Windows.Forms.Button btnPhanTram;
         private System.Windows.Forms.Button btnBang;
         private System.Windows.Forms.Button btnXoa;

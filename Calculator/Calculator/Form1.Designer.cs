@@ -44,7 +44,7 @@
             this.btnTru = new System.Windows.Forms.Button();
             this.btnChia = new System.Windows.Forms.Button();
             this.btnNhan = new System.Windows.Forms.Button();
-            this.btnCham = new System.Windows.Forms.Button();
+            this.btnThapPhan = new System.Windows.Forms.Button();
             this.btnNho = new System.Windows.Forms.Button();
             this.btnCan = new System.Windows.Forms.Button();
             this.btnPhanTram = new System.Windows.Forms.Button();
@@ -228,14 +228,15 @@
             this.btnNhan.UseVisualStyleBackColor = true;
             this.btnNhan.Click += new System.EventHandler(this.NhapPhepToan);
             // 
-            // btnCham
+            // btnThapPhan
             // 
-            this.btnCham.Location = new System.Drawing.Point(94, 214);
-            this.btnCham.Name = "btnCham";
-            this.btnCham.Size = new System.Drawing.Size(35, 35);
-            this.btnCham.TabIndex = 19;
-            this.btnCham.Text = ".";
-            this.btnCham.UseVisualStyleBackColor = true;
+            this.btnThapPhan.Location = new System.Drawing.Point(94, 214);
+            this.btnThapPhan.Name = "btnThapPhan";
+            this.btnThapPhan.Size = new System.Drawing.Size(35, 35);
+            this.btnThapPhan.TabIndex = 19;
+            this.btnThapPhan.Text = ".";
+            this.btnThapPhan.UseVisualStyleBackColor = true;
+            this.btnThapPhan.Click += new System.EventHandler(this.btnThapPhan_Click);
             // 
             // btnNho
             // 
@@ -302,7 +303,7 @@
             this.Controls.Add(this.btnPhanTram);
             this.Controls.Add(this.btnCan);
             this.Controls.Add(this.btnNho);
-            this.Controls.Add(this.btnCham);
+            this.Controls.Add(this.btnThapPhan);
             this.Controls.Add(this.btnNhan);
             this.Controls.Add(this.btnChia);
             this.Controls.Add(this.btnTru);
@@ -346,7 +347,7 @@
         private System.Windows.Forms.Button btnTru;
         private System.Windows.Forms.Button btnChia;
         private System.Windows.Forms.Button btnNhan;
-        private System.Windows.Forms.Button btnCham;
+        private System.Windows.Forms.Button btnThapPhan;
         private System.Windows.Forms.Button btnNho;
         private System.Windows.Forms.Button btnCan;
         private System.Windows.Forms.Button btnPhanTram;

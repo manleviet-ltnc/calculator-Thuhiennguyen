@@ -44,6 +44,7 @@ namespace Calculator
 
         private void NhapPhepToan(object sender, EventArgs e)
         {
+            if (nho != 0)
             TinhKetQua();
 
             Button btn = (Button)sender;
@@ -129,7 +130,15 @@ namespace Calculator
         private void btnNho_Click(object sender, EventArgs e)
         {
             nho = 0;
-            lblDisplay.ResetText();
+            lblDisplay.Text = "0.";
         }
+
+        private void btnThapPhan_Click(object sender, EventArgs e)
+        {
+            if (lblDisplay.Text.Contains(".")) 
+                return;
+            lblDisplay.Text = btnThapPhan.Text;
+        }
+
     }
 }

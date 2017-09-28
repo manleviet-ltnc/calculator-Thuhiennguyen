@@ -105,18 +105,31 @@ namespace Calculator
 
         private void btnCan_Click(object sender, EventArgs e)
         {
-            double Can = double.Parse(lblHienThi.Text);
-            lblHienThi.Text = Math.Sqrt(Can).ToString();
+            double Can = double.Parse(lblDisplay.Text);
+            lblDisplay.Text = Math.Sqrt(Can).ToString();
         }
 
         private void btnPhanTram_Click(object sender, EventArgs e)
         {
-            lblHienThi.Text = (double.Parse(lblHienThi.Text) / 100).ToString();
+            lblDisplay.Text = (double.Parse(lblDisplay.Text) / 100).ToString();
         }
 
         private void btnDoiDau_Click(object sender, EventArgs e)
         {
+            lblDisplay.Text = (-1*double.Parse(lblDisplay.Text)).ToString();
+        }
 
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (lblDisplay.Text != "")
+
+                lblDisplay.Text = (lblDisplay.Text).Substring(0,lblDisplay.Text.Length-1);
+        }
+
+        private void btnNho_Click(object sender, EventArgs e)
+        {
+            nho = 0;
+            lblDisplay.ResetText();
         }
     }
 }

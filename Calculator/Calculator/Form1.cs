@@ -32,8 +32,13 @@ namespace Calculator
         private void NhapSo(string so)
         {
             if (isTypingNumber)
-                lblDisplay.Text = lblDisplay.Text + so;
+            {
+                // Xoá số 0 ở đầu số
+                if (lblDisplay.Text == "0")
+                    lblDisplay.Text = "";
 
+                lblDisplay.Text += so;
+            }
             else
             {
                 lblDisplay.Text = so;
@@ -136,8 +141,8 @@ namespace Calculator
             nho = 0;
             lblDisplay.Text = "0.";
         }
-
-        private void btnThapPhan_Click(object sender, EventArgs e)
+        
+private void btnThapPhan_Click(object sender, EventArgs e)
         {
                 if (lblDisplay.Text.Contains("."))
                 {
@@ -150,6 +155,6 @@ namespace Calculator
                 }
                 lblDisplay.Text += ".";
         }
-
+        
     }
 }

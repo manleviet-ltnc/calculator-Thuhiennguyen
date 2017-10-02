@@ -21,8 +21,6 @@ namespace Calculator
         enum PhepToan { Cong, Tru, Nhan, Chia};
         PhepToan pheptoan;
 
-        double nho;
-
         private void NhapSo(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
@@ -35,12 +33,14 @@ namespace Calculator
         {
             if (isTypingNumber)
                 lblDisplay.Text = lblDisplay.Text + so;
+
             else
             {
                 lblDisplay.Text = so;
                 isTypingNumber = true;
             }
         }
+        double nho;
 
         private void NhapPhepToan(object sender, EventArgs e)
         {
@@ -81,6 +81,9 @@ namespace Calculator
         {
             TinhKetQua();
             isTypingNumber = false;
+            nho = 0;
+            pheptoan = PhepToan.None;
+          
         }
 
         private void frmMain_KeyPress(object sender, KeyPressEventArgs e)
@@ -123,8 +126,9 @@ namespace Calculator
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (lblDisplay.Text != "")
-
-                lblDisplay.Text = (lblDisplay.Text).Substring(0,lblDisplay.Text.Length-1);
+                lblDisplay.Text = (lblDisplay.Text).Substring(0, lblDisplay.Text.Length - 1);
+            if (lblDisplay.Text == "")
+                lblDisplay.Text = "0";
         }
 
         private void btnNho_Click(object sender, EventArgs e)
@@ -135,9 +139,16 @@ namespace Calculator
 
         private void btnThapPhan_Click(object sender, EventArgs e)
         {
-            if (lblDisplay.Text.Contains(".")) 
-                return;
-            lblDisplay.Text = btnThapPhan.Text;
+                if (lblDisplay.Text.Contains("."))
+                {
+                    if (lblDisplay.Text == "0.")
+                    {
+                        lblDisplay.Text = "";
+                        NhapSo("0.");
+                    }
+                    return;
+                }
+                lblDisplay.Text += ".";
         }
 
     }
